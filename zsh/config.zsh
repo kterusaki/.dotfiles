@@ -4,6 +4,17 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f $ZSH/zsh/.p10k.zsh ]] || source $ZSH/zsh/.p10k.zsh
 
+# DEVENV
+# TODO: Move this to work .dotfiles repo and figure out how to source from another project
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk
+export JAVA_HOMES=$JAVA_HOME
+export PROJECTS_ROOT=$HOME/projects
+export RIQ=$PROJECTS_ROOT/riq
+export DEVENV=$PROJECTS_ROOT/devenv
+export PATH=$PATH:$DEVENV/bin
+source $DEVENV/bin/dev_bash_profile.sh
+
 #export LSCOLORS="exfxcxdxbxegedabagacad"
 #export CLICOLOR=true
 #
