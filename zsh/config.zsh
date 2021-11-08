@@ -15,6 +15,9 @@ export DEVENV=$PROJECTS_ROOT/devenv
 export PATH=$PATH:$DEVENV/bin
 source $DEVENV/bin/dev_bash_profile.sh
 
+# GPG
+export GPG_TTY=$(tty)
+
 #export LSCOLORS="exfxcxdxbxegedabagacad"
 #export CLICOLOR=true
 #
